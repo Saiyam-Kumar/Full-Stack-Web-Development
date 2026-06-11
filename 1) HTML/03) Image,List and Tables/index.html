@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Image tag-->
+    <img height="230" width="500" src = "image.png" alt="Train Image">
+    
+    <!--Unordered List-->
+    <ul type = "square">
+        <li>Saiyam</li>
+        <li>Stuti</li>
+        <li>Kumar</li>
+        <li>Sharma</li>
+    </ul>
+    
+    <!--Ordered List-->
+    <ol type = "I">
+        <li>10</li>
+        <li>20</li>
+        <li>30</li>
+        <li>40</li>
+    </ol>
+    
+    <!--Table-->
+    <table border="1">
+    <caption>Student Details</caption>
+        
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>UID</th>
+                <th>Branch</th>
+                <th>SubBranch</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Saiyam</td>
+                <td>24BCS10108</td>
+                <td rowspan = "2">CSE</td> <!--used to create a multiple row cell-->
+                <td>AI</td>
+            </tr>
+
+            <tr>
+                <td>Stuti</td>
+                <td>24BCS11159</td>
+                <td>IT</td>
+            </tr>
+
+            <tr>
+                <td>Monu</td>
+                <td>24BCS14567</td>
+                <td colspan = "2">CSE</td> <!--used to create a multiple coloumn cell-->
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td style="text-align: center;" colspan = "4">NULL</td>
+            </tr>
+        </tfoot>
+
+        
+    </table>
+</body>
+</html>
