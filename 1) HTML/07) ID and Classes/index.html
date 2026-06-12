@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID and Classes in HTML</title>
+</head>
+
+<body>
+    <!--ID is a unique attribute used to identify HTML elements-->
+    <div id="container">
+        Hey This div has id container!
+    </div>
+
+    <!--Class is a attribute used on multiple HTML elements-->
+    <div class="box">
+        Hey This div has class box and this is box1!
+    </div>
+
+    <div class="box">
+        Hey This div has class box and this is box2!
+    </div>
+
+    <div class="box">
+        Hey This div has class box and this is box3!
+    </div>
+
+    <!--If use both id and class on HTML element-->
+    <div id="text" class="mytext">
+        Here id and class both are used!
+    </div>
+     
+    <!--Change property of any HTML element by selecting it by id and class-->
+    <style>
+        #container{
+            background-color: red;
+        }
+        .box{
+            color: burlywood;
+        }
+        #text{
+            color: brown; 
+        }
+        .mytext{
+            color: blueviolet;
+        }
+    </style>
+
+    <!--The div with id text and class mytext will have the color brown because 
+    id has higher property then class.
+    Priority Order
+    Inline Style
+     ↓
+    ID
+     ↓
+    Class
+     ↓
+    Tag-->
+</body>
+</html>
