@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        div{ /* Element Selector */
+            color: darkblue;
+            background-color: darkgrey;
+        }
+        .red{ /* Class Selector */
+            color:red;
+            background-color: aqua;
+        }
+        #green{/* Id Selector */
+            color: cornflowerblue;
+            background-color: hotpink;
+        }
+        div > p{/* Child Selector */
+            color: aqua;
+            background-color: bisque;
+        }
+        
+        div p{ /* Descendent Selector*/
+            color: darkgray;
+            background-color: gold;
+        }
+        *{  /* universal selector*/
+            margin: 0;
+            padding: 0;
+        }
 
+        /*psuedo selector*/
+        a:visited{
+            color: crimson;
+        }
+        a:link{
+            color: green;
+        }
+        a:active{
+            background-color: black;
+        }
+        a:hover{
+            background-color: yellow;
+        }
+        p:first-child{
+            background-color: aqua;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <main>
+        <p>i am first</p>
+        <p>i am second</p>
+    </main>
+
+    <div>
+        I am Saiyam Kumar
+    </div>
+
+    <div class="red">
+        My course is BE
+    </div>
+
+    <div id="green">
+        My university is Chandigarh University
+    </div>
+
+    <div>
+        <p> I am Genius </p>
+    </div>
+
+    <div>
+        <article>
+            <p> heyy i am learing web dev </p>
+        </article>
+    </div>
+
+    <div>
+        <a href="https://www.google.com">Open google</a>
+    </div>
+
+    
+</body>
+</html>
