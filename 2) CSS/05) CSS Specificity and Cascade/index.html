@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Cascade</title>
+    <style>
+        /* Element Selector */
+        h1{
+            color: aqua;
+        }
+
+        /* Class Selectors */
+        .yellow{
+            color: yellow;
+        }
+        .cred{
+            color: darkred;
+        }
+        .cpurple{
+            color: purple; /*This wins because last come so it is chosen*/
+        }
+        /* Attribute Selector */
+        [data-x=a]{
+            background-color: red;
+        }
+        /* CSS Priority Order
+
+        1. Inline Style
+        2. ID Selector
+        3. Class / Attribute / Pseudo-class
+        4. Element Selector
+        5. Universal Selector (*)
+
+        If two selectors have the same priority,
+        the rule written later in the CSS file wins.
+        This is called the Cascade.
+*/
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class = "yellow cred cpurple" data-x ="a">CSS Specificity</h1>
+    </div>
+</body>
+</html>
