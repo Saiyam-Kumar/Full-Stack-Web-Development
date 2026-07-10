@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design a website's Nav Bar</title>
+</head>
+<style>
+:root{
+    --primarycolor: rgb(100, 0, 28);
+    --secondarycolor: rgb(238, 144, 144);
+    --textcolor: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--secondarycolor);
+}
+
+nav{
+    background-color: var(--primarycolor);
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    padding: 20px 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--textcolor);
+    font-weight: bold;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
