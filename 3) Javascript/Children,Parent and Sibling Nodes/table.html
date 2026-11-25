@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table DOM Practice</title>
+</head>
+<body>
+
+<table id="myTable" border="1">
+    <caption>Student Records</caption>
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Saiyam</td>
+            <td>95</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Rahul</td>
+            <td>88</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Aman</td>
+            <td>91</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total Students: 3</td>
+        </tr>
+    </tfoot>
+</table>
+
+<script>
+    let table = document.getElementById("myTable");
+
+    console.log(table.rows);
+    console.log(table.caption);
+    console.log(table.tHead);
+    console.log(table.tFoot);
+    console.log(table.tBodies);
+
+    let tbody = table.tBodies[0];
+
+    console.log(tbody.rows);
+
+    let row = tbody.rows[1];
+
+    console.log(row.cells);
+    console.log(row.sectionRowIndex);
+    console.log(row.rowIndex);
+</script>
+
+</body>
+</html>
