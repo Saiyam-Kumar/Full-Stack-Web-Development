@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Webpage title -->
+    <title>JavaScript DOM Practice</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: lightgreen;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .box {
+            padding: 15px;
+            background-color: lightblue;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+
+        <h1 id="heading">JavaScript DOM Practice</h1>
+
+        <div class="box" id="myBox">
+            This is a box
+        </div>
+
+        <p id="message">Learning DOM manipulation!</p>
+
+        <button id="changeBtn">Change Text</button>
+        <button id="colorBtn">Change Background</button>
+
+        <ul id="myList">
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+
+    </div>
+
+    <script>
+
+        // =====================================
+        // 1. DOCUMENT OBJECT MODEL (DOM)
+        // =====================================
+
+        // Change the webpage title
+        document.title = "Saiyam's DOM Practice";
+
+        // Display webpage title in console
+        console.log("Page Title:", document.title);
+
+        // Display complete body element
+        console.log("Body Element:", document.body);
+
+
+        // =====================================
+        // 2. SELECTING HTML ELEMENTS
+        // =====================================
+
+        // Select element using ID
+        const heading = document.getElementById("heading");
+
+        // Select element using ID
+        const box = document.getElementById("myBox");
+
+        // Select element using ID
+        const message = document.getElementById("message");
+
+        console.log("Heading:", heading);
+        console.log("Box:", box);
+
+
+        // =====================================
+        // 3. CHANGING HTML CONTENT
+        // =====================================
+
+        // Change heading text
+        heading.textContent = "Welcome to JavaScript DOM!";
+
+        // Change paragraph content
+        message.innerText = "DOM makes webpages interactive.";
+
+
+        // =====================================
+        // 4. CHANGING CSS USING JAVASCRIPT
+        // =====================================
+
+        // Change box background color
+        box.style.backgroundColor = "lightcoral";
+
+        // Change text color
+        box.style.color = "white";
+
+        // Change font size
+        box.style.fontSize = "20px";
+
+        // Add CSS class
+        box.classList.add("highlight");
+
+        // Remove CSS class
+        box.classList.remove("highlight");
+
+
+        // =====================================
+        // 5. EVENT HANDLING
+        // =====================================
+
+        // Select buttons
+        const changeBtn = document.getElementById("changeBtn");
+        const colorBtn = document.getElementById("colorBtn");
+
+        // Change text when button is clicked
+        changeBtn.addEventListener("click", function () {
+            message.textContent = "Button clicked! DOM is working.";
+        });
+
+        // Change background when button is clicked
+        colorBtn.addEventListener("click", function () {
+            document.body.style.backgroundColor = "lightblue";
+        });
+
+
+        // =====================================
+        // 6. CREATING NEW HTML ELEMENTS
+        // =====================================
+
+        // Create a new paragraph
+        const newPara = document.createElement("p");
+
+        // Add text to the paragraph
+        newPara.textContent = "This paragraph was created using JavaScript!";
+
+        // Add new paragraph inside container
+        document.querySelector(".container").appendChild(newPara);
+
+
+        // =====================================
+        // 7. SELECTING ELEMENTS USING QUERYSELECTOR
+        // =====================================
+
+        // Select first element with class 'box'
+        const selectedBox = document.querySelector(".box");
+
+        console.log("Selected Box:", selectedBox);
+
+
+        // =====================================
+        // 8. ADDING NEW LIST ITEMS
+        // =====================================
+
+        const list = document.getElementById("myList");
+
+        // Create a new list item
+        const newItem = document.createElement("li");
+
+        // Add content
+        newItem.textContent = "JavaScript";
+
+        // Append it to the list
+        list.appendChild(newItem);
+
+
+        // =====================================
+        // 9. REMOVING AN ELEMENT
+        // =====================================
+
+        // Uncomment to remove the paragraph
+        // newPara.remove();
+
+    </script>
+
+</body>
+</html>
